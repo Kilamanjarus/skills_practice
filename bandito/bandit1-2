@@ -1,0 +1,13 @@
+The password for the next level is stored in a file called - located in the home directory
+
+Commands you may need to solve this level
+ls, cd, cat, file, du, find
+
+Commands I learned:
+cat ./ (helps with special file names to start with current directory './')
+Things I tried:
+cat - (terminal does nothing expecting a command to be entered after the -)
+cd - (error, not a directory)
+cat ./- (the answer, starting with directory path)
+The answer:
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9

@@ -1,0 +1,13 @@
+Level Goal
+The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+
+Commands you may need to solve this level
+ls, cd, cat, file, du, find
+
+Commands I learned:
+file ./* (shows type of files in current directory)
+
+Things I tried:
+i just cat ./-file'd thru to find the answer, but it was inneffecient going back to try and use find
+The answer:
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh

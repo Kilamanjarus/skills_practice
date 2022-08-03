@@ -1,0 +1,11 @@
+In this directory I will be hosting my thought proccess on how I went about finishing each of the bandit levels on overthewire.com
+Each level will have 3 sections
+
+to connect use ssh bandit***@bandit.labs.overthewire.org -p 2220
+where *** is the level number
+
+Commands I learned:
+
+Things I tried:
+
+The answer:

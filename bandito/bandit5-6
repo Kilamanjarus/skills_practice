@@ -1,0 +1,19 @@
+The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+human-readable
+1033 bytes in size
+not executable
+Commands you may need to solve this level
+ls, cd, cat, file, du, find
+
+Commands I learned:
+man **** (gives details about the command entered inplace of ****)
+find -size (finds all files with the the size of ) ****c (where **** is the the amount of bytes characters by c)
+find ! -executable (finds non executable, get rid of ! to find executable)
+
+Things I tried:
+find -executable
+find -size 1033c
+
+The answer:
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7

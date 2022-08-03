@@ -1,0 +1,19 @@
+Level Goal
+The password for the next level is stored in a hidden file in the inhere directory.
+
+Commands you may need to solve this level
+ls, cd, cat, file, du, find
+
+Commands I learned:
+cd (enters directories)
+ls -a (shows hidden files)
+
+Things I tried:
+ls (showed the new directory)
+cd (went into directory)
+ls (nothing showed up)
+ls -a (showed hidden files)
+cat (hidden file)
+
+The answer:
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
