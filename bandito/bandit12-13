@@ -9,12 +9,14 @@ Hex dump on Wikipedia
 
 Commands I learned:
 xxd (hex dump converter, either will make or unmake) -r reverts
-gzip -d (decompress zipped file)
+gzip -d (decompress gzip compressed file)
+bzip2 -d (decompres bzip2 compressed data)
+-tar -xf (-x is extract, -f is file) (tar archives)
 
 Things I tried:
-xxd -r
+Many many unzips
+
 The answer:'
 
-REDO REDO REDO REDO REDO REDO REDO
 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
-/tmp/tmp.vaoaO9VEcD
+/tmp/tmp.1V6TORy1RW
