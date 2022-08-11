@@ -1,6 +1,7 @@
 //Game loop (repeat on set interval)
 import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection } from './snake.js'
 import { update as updateFood, draw as drawFood } from './food.js'
+import { draw as drawWall } from './wall.js'
 import { outsideGrid } from './grid.js'
 let lastRenderTime = 0
 let gameOver = false
@@ -32,13 +33,13 @@ function update() {
   updateSnake()
   updateFood()
   checkDeath()
-
 }
 
 function draw() {
   gameBoard.innerHTML = ''
   drawSnake(gameBoard)
   drawFood(gameBoard)
+  drawWall(gameBoard)
 }
 
 function checkDeath() {
