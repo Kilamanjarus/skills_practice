@@ -1,11 +1,17 @@
 import { randomGridPosition } from './grid.js'
 import { onSnake } from './snake.js'
+import { food } from './food.js'
 // import { update as food } from './food.js'
-let wall = { x: 8, y: 8 }
-let food = { x: 10, y: 10 }
+
+let wall = [{ x: 8, y: 8 }]
+let old_food = food;
+
 export function update() {
-  wall = getRandomWallPosition()
-  console.log(wall)
+  if (old_food != food) {
+    wall.push(getRandomWallPosition())
+    console.log(wall)
+    old_food = food
+  }
 }
 
 function getRandomWallPosition() {
@@ -17,11 +23,13 @@ function getRandomWallPosition() {
 }
 
 export function draw(gameBoard) {
-  const wallElement = document.createElement('div')
-  wallElement.style.gridRowStart = wall.y
-  wallElement.style.gridColumnStart = wall.x
-  wallElement.classList.add('wall')
-  gameBoard.appendChild(wallElement)
+  wall.forEach(function (wallSegment) {
+    const wallElement = document.createElement('div')
+    wallElement.style.gridRowStart = wallSegment.y
+    wallElement.style.gridColumnStart = wallSegment.x
+    wallElement.classList.add('wall')
+    gameBoard.appendChild(wallElement)
+  })
 }
 
 export function wallIntersection() {
