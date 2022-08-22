@@ -1,10 +1,10 @@
 //Game loop (repeat on set interval)
-import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection, onSnake } from './snake.js'
-import { update as updateFood, draw as drawFood } from './food.js'
+import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection, onSnake, snakeLength } from './snake.js'
+import { update as updateFood, draw as drawFood, EXPANSION_RATE as expandLength } from './food.js'
 import { draw as drawWall, update as updateWall, wallIntersection } from './wall.js'
 import { outsideGrid } from './grid.js'
 let lastRenderTime = 0
-let gameOver = false
+export let gameOver = false
 const gameBoard = document.getElementById('game-board')
 
 
@@ -44,5 +44,5 @@ function draw() {
 }
 
 function checkDeath() {
-  gameOver = outsideGrid(getSnakeHead()) || snakeIntersection() || wallIntersection(getSnakeHead())
+  gameOver = outsideGrid(getSnakeHead()) || snakeIntersection() || wallIntersection()
 }

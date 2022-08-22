@@ -1,6 +1,7 @@
 import { randomGridPosition } from './grid.js'
-import { onSnake } from './snake.js'
+import { onSnake, snakeLength } from './snake.js'
 import { food } from './food.js'
+import { gameOver } from './game.js'
 // import { update as food } from './food.js'
 
 let wall = [{ x: 8, y: 8 }]
@@ -33,5 +34,13 @@ export function draw(gameBoard) {
 }
 
 export function wallIntersection() {
-  return onSnake(wall, { ignoreHead: false })
+  let death_Test = false
+  wall.forEach(function (segment) {
+    console.log(segment)
+    if (onSnake(segment, { ignoreHead: false }) === true) {
+      console.log('you die')
+      death_Test = true
+    }
+  })
+  return death_Test
 }
