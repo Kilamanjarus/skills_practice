@@ -36,7 +36,7 @@ export function draw(gameBoard) {
 export function wallIntersection() {
   let death_Test = false
   wall.forEach(function (segment) {
-    console.log(segment)
+    // console.log(segment)
     if (onSnake(segment, { ignoreHead: false }) === true) {
       console.log('you die')
       death_Test = true
